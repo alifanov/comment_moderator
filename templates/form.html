@@ -1,0 +1,20 @@
+<html>
+<body>
+<div>
+    {% if comment %}
+        {% if banned %}
+            <p>This comment should be banned</p>
+        {% else %}
+            <p>This is a normal comment</p>
+        {% endif %}
+    {% endif %}
+</div>
+<form action="/ui" method="POST">
+    <p>Comment <textarea name="comment">{{ comment }}</textarea></p>
+    <p>
+        <button type="submit">Check</button>
+    </p>
+</form>
+
+</body>
+</html>
